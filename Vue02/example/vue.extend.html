@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>vue.extend</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>Vue.extend扩展实例构造器</title>
 </head>
 <body>
+<h1>Vue.extend扩展实例构造器</h1>
+<hr>
+<div id="author"></div>
 
+<script type="text/javascript">
+    var authorExtend = Vue.extend({
+        template:"<p><a :href ='authorURL'>{{authorName}}</a></p>",
+        data:function () {
+            return{
+                authorName:'NyaC',
+                authorURL:"http://baidu.com"
+            }
+        }
+    });
+    new authorExtend().$mount('#author');
+</script>
 </body>
 </html>
