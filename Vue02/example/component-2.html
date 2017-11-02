@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>component-2</title>
+</head>
+<body>
+<h1>component-2</h1>
+<hr>
+<div id="app">
+    <xin :where-from="message"></xin>
+</div>
+
+
+
+<script type="text/javascript">
+    var app=new Vue({
+        el:'#app',
+        data:{
+            message:'JinZhou'
+        },
+        components:{
+            "xin":{
+                template:`<div style="color: red">Chen from {{whereFrom}}</div>`,
+                //Vue不支持处理‘-’，需要使用小驼峰的写法
+                props:['whereFrom']
+            }
+        }
+    })
+</script>
+</body>
+</html>
