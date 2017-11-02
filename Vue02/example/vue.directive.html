@@ -21,9 +21,16 @@
     function unbind() {
         app.$destroy();
     }
-
+    //声明自定义指令directive(指令名,指令的具体实现)
     Vue.directive("chen", {
-        bind:function(el,binding){//被绑定
+        /**
+         * 参数含义
+         * el:指定所绑定的元素，可以用来直接操作DOM
+         * binding:一个对象，包含指令的很多信息
+         * vnode:Vue编译生成的虚拟节点
+         * */
+    bind:function(el,binding){//被绑定
+
         console.log('1 - bind');
         el.style.color=binding.value;
     },
