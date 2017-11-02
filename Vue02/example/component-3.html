@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>component-3</title>
+</head>
+<body>
+<h1>component-3</h1>
+<hr>
+<div id="app">
+    <chen></chen>
+
+</div>
+
+
+
+<script type="text/javascript">
+
+    var city={
+        template:`<div style="color: cyan">SiChuan Of China</div>`
+    }
+
+    //构造器外部写局部注册组件
+    var chenComponet = {
+        template:`
+            <div>
+                <p>Chen From China</p>
+                <city></city>
+            </div>
+        `,
+        //父子组件嵌套
+        components:{
+            "city":city
+        }
+    }
+
+    var app=new Vue({
+        el:'#app',
+        components:{
+            "chen":chenComponet
+        }
+    })
+</script>
+</body>
+</html>
