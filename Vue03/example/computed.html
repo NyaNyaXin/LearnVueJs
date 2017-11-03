@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>computed计算选项</title>
+</head>
+<body>
+<h1>computed计算选项</h1>
+<hr>
+<div id="app">
+    <p>{{newPrice}}</p>
+    <ul>
+        <li v-for="item in reverNews">{{item.title}}--{{item.date}}</li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    var newsList=[
+        {title:"不忘初心 牢记使命 永远奋斗",date:"2017/10/3"},
+        {title:"应习近平邀请 美总统特朗普将对中国进行国事访问",date:"2017/10/4"},
+        {title:"李克强与俄罗斯总理共同会见记者  张德江主持会议",date:"2017/10/5"},
+        {title:"张高丽主持召开南水北调工程建委会全会 汪洋出席",date:"2017/10/6"}
+    ]
+    var app=new Vue({
+        el:'#app',
+        data:{
+            price:100,
+            newsList:newsList
+        },
+        computed:{
+            newPrice:function () {
+                return this.price="￥"+this.price+"元";
+            },
+            reverNews:function () {
+                return this.newsList.reverse();
+            }
+        }
+    })
+</script>
+</body>
+</html>
