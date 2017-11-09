@@ -1,17 +1,17 @@
 <template>
   <div>
     <h2>{{message}}</h2>
-    <router-view/>
+
   </div>
 
 </template>
 
 <script>
   export default {
-    name: 'Hi',
+    name: 'Hi1',
     data () {
       return {
-        message: 'Im Hi page'
+        message: 'Im Hi1 page'
       }
     }
   }
