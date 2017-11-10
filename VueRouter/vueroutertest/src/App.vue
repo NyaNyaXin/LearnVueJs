@@ -7,7 +7,11 @@
     <router-link to="/goparams/11/chen">goParams</router-link>
     <router-link to="/chenxin">chenxin</router-link>
     <router-link to="/home1">Home</router-link>|
-    <router-view/>
+
+
+    <transition name="fade" mode="out-in">
+      <router-view/>
+    </transition>
 
   </div>
 </template>
@@ -27,4 +31,17 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+  .fade{
+    opacity: 0px;
+  }
+  .fade-enter-active{
+    transition: opacity .5s;
+  }
+  .fade-leave{
+    opacity: 1;
+  }
+  .fade-leave-active{
+    opacity: 0;
+    transition: opacity .5s;
+  }
 </style>
