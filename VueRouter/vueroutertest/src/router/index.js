@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Params from '@/components/Params'
+import Hi1 from '@/components/Hi1'
 Vue.use(Router)
 
 export default new Router({
@@ -9,7 +10,8 @@ export default new Router({
     {
       path: '/',
       name: 'Hello',
-      component: HelloWorld
+      component: HelloWorld,
+      alias: '/home1'
     },
     {
       path: '/params/:newsId(\\d+)/:newsTitle',
@@ -22,6 +24,11 @@ export default new Router({
     {
       path: '/goparams/:newsId(\\d+)/:newsTitle',
       redirect: '/params/:newsId(\\d+)/:newsTitle'
+    },
+    {
+      path: '/hi1',
+      component: Hi1,
+      alias: '/chenxin'
     }
 
   ]

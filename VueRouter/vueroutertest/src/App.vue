@@ -5,6 +5,8 @@
     <router-link to="/params/111/henhao">Params</router-link>|
     <router-link to="/gohome">goHome</router-link>
     <router-link to="/goparams/11/chen">goParams</router-link>
+    <router-link to="/chenxin">chenxin</router-link>
+    <router-link to="/home1">Home</router-link>|
     <router-view/>
 
   </div>
