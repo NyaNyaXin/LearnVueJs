@@ -1,6 +1,11 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png"><br>
+    <div>
+      <button @click="goBack">后退</button>
+      <button @click="goForword">前进</button>
+      <button @click="goHome">返回首页</button>
+    </div>
     <router-link to="/">Home</router-link>|
     <router-link to="/params/111/henhao">Params</router-link>|
     <router-link to="/gohome">goHome</router-link>
@@ -16,13 +21,22 @@
 
   </div>
 </template>
-
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  methods: {
+    goBack () {
+      this.$router.go(-1)
+    },
+    goForword () {
+      this.$router.go(1)
+    },
+    goHome () {
+      this.$router.push('/')
+    }
+  }
 }
 </script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
