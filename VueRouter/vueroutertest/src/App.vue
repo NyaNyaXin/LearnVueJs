@@ -7,6 +7,7 @@
     <router-link to="/goparams/11/chen">goParams</router-link>
     <router-link to="/chenxin">chenxin</router-link>
     <router-link to="/home1">Home</router-link>|
+    <router-link to="/aaa">aaaa</router-link>|
 
 
     <transition name="fade" mode="out-in">
