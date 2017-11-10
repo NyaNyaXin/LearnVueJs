@@ -14,6 +14,14 @@ export default new Router({
     {
       path: '/params/:newsId(\\d+)/:newsTitle',
       component: Params
+    },
+    {
+      path: '/gohome',
+      redirect: '/'
+    },
+    {
+      path: '/goparams/:newsId(\\d+)/:newsTitle',
+      redirect: '/params/:newsId(\\d+)/:newsTitle'
     }
 
   ]

@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png"><br>
-    <router-link to="/">Home</router-link>
-    <router-link to="/params/111/henhao">Params</router-link>
+    <router-link to="/">Home</router-link>|
+    <router-link to="/params/111/henhao">Params</router-link>|
+    <router-link to="/gohome">goHome</router-link>
+    <router-link to="/goparams/11/chen">goParams</router-link>
     <router-view/>
 
   </div>
